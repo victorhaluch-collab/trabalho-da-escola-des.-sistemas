@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gigantes da Tecnologia</title>
+
+<!-- Aqui estou importando uma fonte moderna -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* Aqui faço um reset básico para padronizar tudo */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Aqui defino o fundo e cor do site */
+body{
+background:#0f172a;
+color:#fff;
+scroll-behavior:smooth;
+}
+
+/* Aqui é o menu fixo no topo */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+/* Aqui estilizo os links do menu */
+nav a{
+color:#38bdf8;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Aqui é o efeito ao passar o mouse */
+nav a:hover{
+color:#fff;
+}
+
+/* Aqui é a tela inicial */
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg,#020617,#1e293b);
+text-align:center;
+}
+
+/* Aqui são as seções que começam escondidas */
+section{
+padding:100px 20px;
+max-width:900px;
+margin:auto;
+opacity:0;
+transform:translateY(50px);
+transition:0.6s;
+}
+
+/* Aqui elas aparecem com animação */
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Aqui crio os cards */
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+}
+
+/* Aqui estou diminuindo e centralizando as imagens */
+img{
+width:250px;
+max-width:100%;
+border-radius:10px;
+margin-top:10px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* Aqui começo a linha do tempo */
+.timeline{
+border-left:4px solid #38bdf8;
+padding-left:20px;
+}
+
+/* Aqui é cada item da timeline */
+.item{
+margin:20px 0;
+padding:12px;
+background:#1e293b;
+
+/* Começa escondido para animar */
+opacity:0;
+transform:translateX(-30px);
+transition:0.6s;
+}
+
+/* Aqui ele aparece quando ativado */
+.item.show{
+opacity:1;
+transform:translateX(0);
+}
+
+/* Aqui é o efeito ao passar o mouse */
+.item:hover{
+transform:translateX(10px);
+background:#334155;
+}
+
+/* Aqui estilizo os links da timeline */
+.timeline a{
+color:#38bdf8;
+text-decoration:none;
+display:block;
+}
+
+/* Aqui muda a cor ao passar o mouse */
+.timeline a:hover{
+color:#fff;
+}
+
+/* Aqui estilizo bloco de código */
+pre{
+background:#020617;
+padding:15px;
+border-radius:10px;
+color:#22c55e;
+}
+
+/* Aqui é o rodapé */
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Aqui é o menu de navegação -->
+<nav>
+<a href="#pessoa">Pessoa</a>
+<a href="#linguagem">Linguagem</a>
+<a href="#sistema">Sistema</a>
+</nav>
+
+<!-- Aqui é a tela inicial -->
+<header>
+<h1>Gigantes da Tecnologia</h1>
+<p>Projeto Profissional</p>
+</header>
+
+<!-- Aqui começa a parte da pessoa -->
+<section id="pessoa">
+<h2>Pessoa - Bill Gates</h2>
+
+<div class="card">
+<p><b>Biografia:</b> Cofundador da Microsoft.</p>
+<p><b>Contribuição:</b> Criador do Windows.</p>
+<p><b>Legado:</b> Popularizou o computador pessoal.</p>
+
+<!-- Aqui é o código da imagem -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg">
+</div>
+
+<h3>Linha do Tempo</h3>
+
+<div class="timeline">
+
+<!-- Aqui cada item é clicável e leva para uma fonte -->
+<div class="item">
+<a href="https://pt.wikipedia.org/wiki/Bill_Gates" target="_blank">
+1955 - Nascimento
+</a>
+</div>
+
+<div class="item">
+<a href="https://pt.wikipedia.org/wiki/Microsoft" target="_blank">
+1975 - Fundação da Microsoft
+</a>
+</div>
+
+<div class="item">
+<a href="https://pt.wikipedia.org/wiki/Microsoft_Windows" target="_blank">
+1985 - Windows lançado
+</a>
+</div>
+
+<div class="item">
+<a href="https://pt.wikipedia.org/wiki/Computador_pessoal" target="_blank">
+1995 - Popularização do PC
+</a>
+</div>
+
+<div class="item">
+<a href="https://www.gatesfoundation.org/" target="_blank">
+2000 - Fundação filantrópica
+</a>
+</div>
+
+<div class="item">
+<a href="https://pt.wikipedia.org/wiki/Bill_Gates#Sa%C3%ADda_da_Microsoft" target="_blank">
+2008 - Sai da Microsoft
+</a>
+</div>
+
+<div class="item">
+<a href="https://www.gatesnotes.com/" target="_blank">
+Hoje - Projetos sociais
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- Aqui começa a parte da linguagem -->
+<section id="linguagem">
+<h2>Linguagem - Python</h2>
+
+<div class="card">
+
+<!-- Aqui é um exemplo de código -->
+<pre>
+x = 10
+
+if x > 5:
+    print("Maior")
+
+for i in range(3):
+    print(i)
+</pre>
+
+<!-- Aqui é a imagem da linguagem -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
+
+</div>
+</section>
+
+<!-- Aqui começa a parte do sistema -->
+<section id="sistema">
+<h2>Sistema - Linux</h2>
+
+<div class="card">
+<p><b>Histórico:</b> Criado em 1991.</p>
+<p><b>Operação:</b> Kernel controla hardware.</p>
+<p><b>Impacto:</b> Software livre.</p>
+
+<!-- Aqui é a imagem do sistema -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg">
+</div>
+
+</section>
+
+<!-- Aqui é o rodapé -->
+<footer>
+<p>Projeto escolar - Nome:Victor R</p>
+</footer>
+
+<!-- Aqui começa o JavaScript -->
+<script>
+
+/* Aqui seleciono todas as seções */
+const sections = document.querySelectorAll("section");
+
+/* Aqui seleciono os itens da timeline */
+const items = document.querySelectorAll(".item");
+
+/* Função principal de animação */
+function mostrarElementos(){
+
+/* Aqui faço as seções aparecerem ao rolar */
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+sec.classList.add("show");
+}
+});
+
+/* Aqui faço a timeline aparecer uma por uma */
+items.forEach((item, index) => {
+const top = item.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 50 && !item.classList.contains("show")){
+setTimeout(() => {
+item.classList.add("show");
+}, index * 200);
+}
+});
+
+}
+
+/* Aqui executa quando a página carrega */
+window.addEventListener("load", mostrarElementos);
+
+/* Aqui executa quando rola a página */
+window.addEventListener("scroll", mostrarElementos);
+
+</script>
+
+</body>
+</html>
